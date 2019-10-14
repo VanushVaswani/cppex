@@ -71,34 +71,3 @@ uint8_t *generate_bytes(uint8_t *in, size_t num)
 	}
 	return in;
 }
-
-#if 0
-int main(int argc, char *argv[])
-{
-	VInMemoryCache cache{5};
-
-	size_t n = 0;
-	uint8_t *ptr = NULL;
-	cache.put("hello", generate_bytes(10), 10);
-	cache.put("blah", generate_bytes(20), 20);
-	cache.put("blah2", generate_bytes(20), 20);
-	cache.put("blah3", generate_bytes(20), 20);
-	cache.put("blah4", generate_bytes(20), 20);
-	cache.get("hello", &n);
-	cache.get("blah", &n);
-	cache.get("blah2", &n);
-	cache.put("blah5", generate_bytes(20), 20);
-
-	//cache.put("blah5", generate_bytes(20), 20);
-	//cache.put("blah6", generate_bytes(20), 20);
-	//ptr = cache.get("blah2", &n);
-	//ptr = cache.get("hello", &n);
-	if (ptr) {
-		std::cout << n << std::endl;
-		for (int i = 0; i < n; i++) {
-			std::cout << int(ptr[i]) << std::endl;
-		}
-	}
-	return 0;
-}
-#endif

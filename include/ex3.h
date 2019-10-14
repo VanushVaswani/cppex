@@ -56,23 +56,3 @@ class VString
 		char *str_;
 		int n_;
 };
-
-
-#if 0
-int main(int argc, char *argv[])
-{
-	VString hey{"hello"};
-	VString blah{hey};
-	VString replace{"qbbllfsdf"};
-
-
-	std::string test{"BLAHj"};
-
-	std::transform(test.begin(), test.end(), test.begin(), [](auto c){ return std::tolower(c); });
-
-	std::cout << test << std::endl;
-
-
-	return 0;
-}
-#endif
