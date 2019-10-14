@@ -32,7 +32,7 @@ class VInMemoryCache
 			li_map_[key] = order_.begin();
 
 			data_[key] = std::make_pair(std::make_unique<uint8_t[]>(sz), sz);
-			memcpy(data_[key].first.get(), in_data, sz);
+			std::memcpy(data_[key].first.get(), in_data, sz);
 		}
 
 		uint8_t *get(std::string key, size_t *sz)

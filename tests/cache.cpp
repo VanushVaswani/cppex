@@ -1,4 +1,5 @@
 #include <catch2/catch.hpp>
+#include <cstring>
 #include "ex2.h"
 
 void print_bytes(uint8_t *ptr, size_t n)
